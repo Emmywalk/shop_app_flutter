@@ -13,9 +13,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shopping App',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromRGBO(254, 206, 1, 1),
+          primary: const Color.fromRGBO(254, 206, 1, 1),
+        ),
         fontFamily: 'Lato',
+        inputDecorationTheme: const InputDecorationTheme(
+          hintStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+          prefixIconColor: Color.fromRGBO(119, 119, 1119, 1),
+        ),
+        textTheme: TextTheme(
+          titleMedium: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+          bodySmall: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ),
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
